@@ -3,14 +3,14 @@ title: Simple Chili
 tags: [Dinner, slow cooker]
 ---
 
-# Simple Chili
-
+<% layout.data[:list] = capture do %>
 ```
 12oz can red kidney beans
 20oz can diced tomatoes
 1lb ground beef
 2tbsp chili powder
 ```
+<% end %>
 
 Fills 3qt slow cooker, double for 5qt.
 

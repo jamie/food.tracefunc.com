@@ -27,5 +27,6 @@ defaults:
       path: "_pages"
     values:
       layout: "page"
+      template_engine: erb
 
 # timezone: America/Los_Angeles

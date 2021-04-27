@@ -3,6 +3,7 @@ title: Bean Salad
 tags: [Side, vegetarian]
 ---
 
+<% layout.data[:list] = capture do %>
 ```
 1 can green beans
 1 can wax beans
@@ -15,6 +16,7 @@ tags: [Side, vegetarian]
 3/4 cup vegetable oil (canola)
 1/2 cup sugar
 ```
+<% end %>
 
 1. Drain all cans, finely chop onion, combine in a large bowl.
 
