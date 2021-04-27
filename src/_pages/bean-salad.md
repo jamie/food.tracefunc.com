@@ -10,7 +10,7 @@ tags: [Side, vegetarian]
 1 can red kidney beans
 1 can chick peas
 1 can kernel corn
-1 small white onion
+1 sm. white onion
 
 1 cup vinegar
 3/4 cup vegetable oil (canola)
