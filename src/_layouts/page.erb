@@ -12,12 +12,14 @@ layout: default
 <!-- Post Content -->
 <div class="card">
   <div class="card-body">
+    <h3 class="card-title">Ingredients</h3>
     <%= markdownify layout.data[:list] %>
   </div>
 </div>
 
 <div class="card">
   <div class="card-body">
+    <h3 class="card-title">Method</h3>
     <%= yield %>
   </div>
 </div>
