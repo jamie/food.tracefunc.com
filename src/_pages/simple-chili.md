@@ -4,12 +4,10 @@ tags: [Dinner, slow cooker]
 ---
 
 <% layout.data[:list] = capture do %>
-```
-12 oz   can red kidney beans
-20 oz   can diced tomatoes
-1  lb   ground beef
-2  tbsp chili powder
-```
+12oz can : red kidney beans
+20oz can : diced tomatoes
+1 lb     : ground beef
+2 tbsp   : chili powder
 <% end %>
 
 Fills 3qt slow cooker, double for 5qt.
