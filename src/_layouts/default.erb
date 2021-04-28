@@ -2,13 +2,16 @@
 <html lang="en">
 
 <head>
-  <%= liquid_render "head", metadata: site.metadata %>
+  <%= liquid_render "head", metadata: site.metadata, page_title: page.data["title"] %>
 </head>
 
 <body>
-
   <!-- Navigation -->
-  <%= liquid_render "navbar", metadata: site.metadata, page: page %>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <%= liquid_render "navbar", metadata: site.metadata, page: page %>
+    </div>
+  </nav>
 
   <!-- Page Content -->
   <div class="container">
@@ -28,7 +31,12 @@
   <!-- /.container -->
 
   <!-- Footer -->
-  <%= liquid_render "footer", metadata: site.metadata %>
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <%= liquid_render "footer", metadata: site.metadata %>
+    </div>
+    <!-- /.container -->
+  </footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
