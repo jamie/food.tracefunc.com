@@ -1,7 +1,7 @@
 <dl class="row">
   <% items.to_s.split("\n").each do |item| %>
     <% first, last = item.split(/\s*:\s*/) %>
-    <dt class="col-sm-3 text-sm-right"><%= first %></dt>
-    <dd class="col-sm-9 ml-3 ml-sm-auto"><%= last %></dd>
+    <dt class="col-sm-3 text-sm-right"><%= markdownify first %></dt>
+    <dd class="col-sm-9 ml-3 ml-sm-auto"><%= markdownify last %></dd>
   <% end %>
 </dl>
