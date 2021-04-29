@@ -38,6 +38,7 @@ jobs:
         git init
         git config user.name "$GITHUB_ACTOR"
         git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+        touch .nojekyll
         git add .
         git commit -m "deploy site"
         git push --force "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" HEAD:gh-pages
