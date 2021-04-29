@@ -1,6 +1,6 @@
 class IngredientList
   def initialize(items)
-    @items = items.split("\n")
+    @items = items.to_s.split("\n")
   end
 
   def entries
