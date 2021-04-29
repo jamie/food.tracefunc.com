@@ -16,7 +16,7 @@ layout: default
     <div class="card">
       <div class="card-body">
         <h3 class="card-title">Ingredients</h3>
-        <%= render IngredientList.new(layout.data[:list]) %>
+        <%= render "ingredients", items: layout.data[:list] %>
       </div>
     </div>
   </div>
