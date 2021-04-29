@@ -4,9 +4,8 @@
 </button>
 <div class="collapse navbar-collapse" id="navbarResponsive">
   <ul class="navbar-nav ml-auto">
-    <!-- TODO: active -->
     <% %w[breakfast lunch dinner dessert appetizer side].each do |category| %>
-      <li class="nav-item">
+      <li class="nav-item <%= "active" if page.data["title"] == "#{category.titleize} Recipes" %>">
         <a class="nav-link" href="/<%= category %>/"><%= category.titleize %></a>
       </li>
     <% end %>
