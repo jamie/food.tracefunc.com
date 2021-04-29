@@ -7,8 +7,8 @@ class IngredientList
     @items.map do |item|
       first, last = item.split(/\s*:\s*/)
       <<~HTML
-        <dt class="col-sm-3 text-right">#{first}</dt>
-        <dd class="col-sm-9">#{last}</dd>
+        <dt class="col-sm-3 text-sm-right">#{first}</dt>
+        <dd class="col-sm-9 ml-3 ml-sm-auto">#{last}</dd>
       HTML
     end
   end
