@@ -13,7 +13,7 @@ layout: default
 <div class="card">
   <div class="card-body">
     <h3 class="card-title">Ingredients</h3>
-    <%= listify layout.data[:list] %>
+    <%= render IngredientList.new(layout.data[:list]) %>
   </div>
 </div>
 
