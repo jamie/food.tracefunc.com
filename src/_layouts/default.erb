@@ -2,7 +2,18 @@
 <html lang="en">
 
 <head>
-  <%= liquid_render "head", metadata: site.metadata, page_title: page.data["title"] %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="<%= site.metadata.description %>" />
+  <meta name="author" content="Jamie Macey">
+
+  <title><%= [page.data["title"], site.metadata.title].compact.join(" | ") %></title>
+
+  <!-- Bootstrap core style -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="<%= webpack_path "css" %>" />
+  <script src="<%= webpack_path "js" %>" defer></script>
 </head>
 
 <body>
@@ -18,13 +29,6 @@
     <%= yield %>
   </div>
  
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <%= liquid_render "footer", metadata: site.metadata %>
-    </div>
-  </footer>
-
   <!-- Bootstrap core JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js">
