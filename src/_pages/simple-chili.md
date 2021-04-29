@@ -1,6 +1,7 @@
 ---
 title: Simple Chili
-tags: [Dinner, slow cooker]
+category: dinner
+tags: [slow cooker]
 ---
 
 <% layout.data[:list] = capture do %>

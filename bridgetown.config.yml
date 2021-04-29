@@ -22,6 +22,10 @@ permalink: pretty
 
 content_engine: resource
 
+pagination:
+  enabled: true
+  per_page: 1000
+
 defaults:
   - scope:
       path: "_pages"

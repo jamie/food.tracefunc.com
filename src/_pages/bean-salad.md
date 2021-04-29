@@ -1,6 +1,7 @@
 ---
 title: Bean Salad
-tags: [Side, vegetarian]
+category: side
+tags: [vegetarian]
 ---
 
 <% layout.data[:list] = capture do %>
