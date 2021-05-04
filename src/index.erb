@@ -9,7 +9,9 @@ layout: default
     <div class="col-6 col-lg-4">
       <a href="/<%= category %>/">
         <div class="card my-2">
-          <img class="card-img-top" src="https://picsum.photos/300/200" alt="">
+          <div class="card-img-top ratio ratio-4x3">
+            <img style="object-fit: cover;" src="/images/category-<%= category %>-EXT.webp" alt="">
+          </div>
           <div class="card-body">
             <h4 class="card-title text-center">
               <%= category.titleize %>
