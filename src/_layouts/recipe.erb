@@ -6,10 +6,14 @@ layout: default
 <h1 class="mt-4"><%= page.data[:title] %></h1>
 
 <div class="row">
-  <div class="col-12">
-    <!-- Preview Image -->
-    <img class="img-fluid rounded mb-4 mx-auto w-100 text-center" src="https://picsum.photos/900/300" alt="">
-  </div>
+  <% if page.data["image"] %>
+    <div class="col-12 ratio ratio-21x9">
+      <!-- Preview Image -->
+      <img style="object-fit: cover;" class="img-fluid rounded pb-4 mx-auto w-100" src="<%= page.data["image"] %>" alt="">
+    </div>
+  <% else %>
+    <hr/>
+  <% end %>
 
   <!-- Ingredients -->
   <div class="col-lg-5 order-lg-last mb-3">

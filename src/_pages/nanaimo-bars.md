@@ -2,6 +2,7 @@
 title: Nanaimo Bars
 category: dessert
 tags: []
+image: /images/nanaimo-bars-EXT.webp
 ---
 
 <% layout.data[:list] = capture do %>
