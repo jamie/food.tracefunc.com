@@ -5,7 +5,7 @@ tags: []
 image: /images/nanaimo-bars-EXT.webp
 ---
 
-<% layout.data[:list] = capture do %>
+<% page.data[:list] = capture do %>
 3/4 cup    : butter
 3/4 cup    : sugar
 7 tbsp     : cocoa

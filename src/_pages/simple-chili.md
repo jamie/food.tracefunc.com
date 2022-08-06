@@ -4,7 +4,7 @@ category: dinner
 tags: [slow cooker]
 ---
 
-<% layout.data[:list] = capture do %>
+<% page.data[:list] = capture do %>
 12oz can : red kidney beans
 20oz can : diced tomatoes
 1 lb     : ground beef

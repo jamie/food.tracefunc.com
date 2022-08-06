@@ -4,7 +4,7 @@ category: side
 tags: [vegetarian]
 ---
 
-<% layout.data[:list] = capture do %>
+<% page.data[:list] = capture do %>
 1 can   : green beans
 1 can   : wax beans
 1 can   : red kidney beans
