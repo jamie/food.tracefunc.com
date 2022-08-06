@@ -25,7 +25,6 @@ vendor
 
 # Mac files
 .DS_Store
-.obsidian
 
 # Yarn
 yarn-error.log
