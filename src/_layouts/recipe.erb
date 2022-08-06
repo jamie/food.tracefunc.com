@@ -16,16 +16,6 @@ layout: default
   <% end %>
 
   <!-- Ingredients -->
-  <% if page.data[:list] %>
-  <div class="col-lg-5 order-lg-last mb-3">
-    <div class="card">
-      <div class="card-body">
-        <h3 class="card-title">Ingredients</h3>
-        <%= render "ingredients", items: page.data[:list] %>
-      </div>
-    </div>
-  </div>
-  <% end %>
   <% if page.data[:cook_json] %>
     <div class="col-lg-5 order-lg-last mb-3">
       <div class="card">

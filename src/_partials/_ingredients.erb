@@ -1,16 +1,6 @@
 <dl class="row">
-  <% if items.is_a?(Array) %>
-    <!-- Cooklang -->
-    <% items.each do |item| %>
-      <dt class="col-sm-3 text-sm-right"><%= item['amount'] %></dt>
-      <dd class="col-sm-9 ml-3 ml-sm-auto"><%= item['name'] %></dd>
-    <% end %>
-  <% else %>
-    <!-- Legacy -->
-    <% items.to_s.split("\n").each do |item| %>
-      <% first, last = item.split(/\s*:\s*/) %>
-      <dt class="col-sm-3 text-sm-right"><%= first %></dt>
-      <dd class="col-sm-9 ml-3 ml-sm-auto"><%= last %></dd>
-    <% end %>
+  <% Array(items).each do |item| %>
+    <dt class="col-sm-3 text-sm-right"><%= item['amount'] %></dt>
+    <dd class="col-sm-9 ml-3 ml-sm-auto"><%= item['name'] %></dd>
   <% end %>
 </dl>
