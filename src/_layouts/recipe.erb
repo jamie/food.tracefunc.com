@@ -11,10 +11,20 @@ layout: default
     </div>
     <div class="col-lg-4 position-relative" style="min-height: 70px;">
       <h1 class="position-absolute top-50 start-50 translate-middle w-100 text-center"><%= page.data[:title] %></h1>
+      <% if page.data[:source] %>
+        <p class="position-absolute bottom-0 start-50 translate-middle w-100 text-center">
+          source: <%= link_to page.data[:source][:site], page.data[:source][:url] %>
+        </p>
+      <% end %>
     </div>
   <% else %>
     <div class="col p-5 position-relative">
       <h1 class="position-absolute top-50 start-50 translate-middle w-100 text-center"><%= page.data[:title] %></h1>
+      <% if page.data[:source] %>
+        <p class="position-absolute bottom-0 start-50 translate-middle w-100 text-center">
+          source: <%= link_to page.data[:source][:site], page.data[:source][:url] %>
+        </p>
+      <% end %>
     </div>
   <% end %>
 </div>
