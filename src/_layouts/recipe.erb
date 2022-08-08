@@ -52,11 +52,6 @@ layout: default
       <h3 class="card-title text-decoration-underline">Ingredients</h3>
       <%= render "ingredients", items: page.data[:ingredients] %>
     </div>
-  <% elsif page.data[:cook_json] %>
-    <div class="col-lg-5 mb-3">
-      <h3 class="card-title text-decoration-underline">Ingredients</h3>
-      <%= render "ingredients", items: page.data[:cook_json]['ingredients'] %>
-    </div>
   <% end %>
 
   <!-- Method Column -->
