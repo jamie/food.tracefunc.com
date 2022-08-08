@@ -13,7 +13,11 @@ layout: default
       <h1 class="position-absolute top-50 start-50 translate-middle w-100 text-center"><%= page.data[:title] %></h1>
       <% if page.data[:source] %>
         <p class="position-absolute bottom-0 start-50 translate-middle w-100 text-center">
-          source: <%= link_to page.data[:source][:site], page.data[:source][:url] %>
+          <% if page.data[:source][:link] %>
+            via <%= link_to page.data[:source][:text], page.data[:source][:url] %>
+          <% else %>
+            <%= page.data[:source][:text] %>
+          <% end %>
         </p>
       <% end %>
     </div>
@@ -22,7 +26,7 @@ layout: default
       <h1 class="position-absolute top-50 start-50 translate-middle w-100 text-center"><%= page.data[:title] %></h1>
       <% if page.data[:source] %>
         <p class="position-absolute bottom-0 start-50 translate-middle w-100 text-center">
-          source: <%= link_to page.data[:source][:site], page.data[:source][:url] %>
+          source: <%= link_to page.data[:source][:text], page.data[:source][:url] %>
         </p>
       <% end %>
     </div>
