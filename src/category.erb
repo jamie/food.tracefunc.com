@@ -9,15 +9,13 @@ prototype:
 <h1><%= page.data["title"] %></h1>
 
 <div class="row">
-  <% paginator.resources.each do |recipe| %>
+  <% paginator.resources.sort_by{_1.data['title']}.each do |recipe| %>
     <div class="col-12 col-md-6 col-lg-4">
       <a href="<%= recipe.relative_url %>">
         <div class="card my-2">
-          <% if recipe.data["image"] %>
-            <div class="card-img-top d-none d-sm-block ratio ratio-16x9">
-              <img style="object-fit: cover;" src="<%= recipe.data["image"] %>" alt="">
-            </div>
-          <% end %>
+          <div class="card-img-top d-none d-sm-block ratio ratio-16x9">
+            <img style="object-fit: cover;" src="<%= recipe.data["image"] || "/images/placeholder.png" %>" alt="">
+          </div>
           <div class="card-body">
             <h4 class="card-title text-center mb-0">
               <%= recipe.data["title"] %>

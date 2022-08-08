@@ -13,7 +13,7 @@ layout: default
       <h1 class="position-absolute top-50 start-50 translate-middle w-100 text-center"><%= page.data[:title] %></h1>
       <% if page.data[:source] %>
         <p class="position-absolute bottom-0 start-50 translate-middle w-100 text-center">
-          <% if page.data[:source][:link] %>
+          <% if page.data[:source][:url] %>
             via <%= link_to page.data[:source][:text], page.data[:source][:url] %>
           <% else %>
             <%= page.data[:source][:text] %>
