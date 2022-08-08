@@ -35,16 +35,33 @@ layout: default
 
 <div class="row">
   <!-- Ingredients -->
-  <% if page.data[:cook_json] %>
+  <% if page.data[:ingredients].is_a?(Array) %>
     <div class="col-lg-5 mb-3">
-      <h3 class="card-title">Ingredients</h3>
+      <h3 class="card-title text-decoration-underline">Ingredients</h3>
+      <% page.data[:ingredients].each do |section| %>
+        <% section.each do |heading, items| %>
+          <h4><%= heading %></h4>
+          <div class="ms-3">
+            <%= render "ingredients", items: items %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% elsif page.data[:ingredients].is_a?(Hash) %>
+    <div class="col-lg-5 mb-3">
+      <h3 class="card-title text-decoration-underline">Ingredients</h3>
+      <%= render "ingredients", items: page.data[:ingredients] %>
+    </div>
+  <% elsif page.data[:cook_json] %>
+    <div class="col-lg-5 mb-3">
+      <h3 class="card-title text-decoration-underline">Ingredients</h3>
       <%= render "ingredients", items: page.data[:cook_json]['ingredients'] %>
     </div>
   <% end %>
 
   <!-- Method Column -->
   <div class="col-lg-7 border-start">
-    <h3 class="card-title">Instructions</h3>
+    <h3 class="card-title text-decoration-underline">Instructions</h3>
     <%= yield %>
   </div>
 </div>

@@ -1,6 +1,8 @@
 <dl class="row">
   <% Array(items).each do |item| %>
-    <dt class="col-sm-3 text-sm-right"><%= item['amount'] %></dt>
-    <dd class="col-sm-9 ml-3 ml-sm-auto"><%= item['name'] %></dd>
+    <% amount = item[1] || item['amount'] %>
+    <% name = item[0] || item['name'] %>
+    <dt class="col-sm-3 text-sm-right"><%= amount %></dt>
+    <dd class="col-sm-9 ml-3 ml-sm-auto"><%= name %></dd>
   <% end %>
 </dl>
