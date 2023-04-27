@@ -1,0 +1,6 @@
+{
+   "name": "Tracefunc Food",
+   "start_url": "https://food.tracefunc.com/",
+   "display": "standalone",
+   "id": "com.tracefunc.food"
+}
