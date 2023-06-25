@@ -2,6 +2,7 @@
 title: Bean Salad
 category: side
 tags: [vegetarian]
+servings: 8-10
 ingredients:
   green beans: 1 can
   wax beans: 1 can
